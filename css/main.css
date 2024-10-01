@@ -1,16 +1,29 @@
 .contenedorGaleria{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding: 1rem;
     background-color: blueviolet;
-    color:black;
+    color:black; 
+    color: rgb(255, 0, 0);
+    text-align: center;
+}
+.prep{
+    color: black;
+    display: flex;
+    
+
+
+
 }
 
 body{
     margin: 0;
     padding: 0;
     box-sizing:border-box 
+    
 }
+
 .contenedorGaleria img{
-    width: 100%; 
+    width: 70%; 
+    
 }
