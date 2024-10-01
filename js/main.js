@@ -1,18 +1,99 @@
 /* Peseudocodigo: 
 Inicio
 Leer imagen
+Muestra imagen
+Mientras seleccion de otra imagen
+    Cambia de imagen
+Fin mientras
 Si reinicia pagina(bucle)
     Leer nueva imagen
 Fin si 
 Fin
-
-
 */
-const seccion = document.querySelector
+
+
+
+
+const btnCierra = document.querySelector('#btn-cierra');
+const btnAdelante = document.querySelector('#btn-delante');
+const btnAtras = document.querySelector('#btn-atras')
+//declaracion de id para cerrar, y pasar imagenes por seleccion
+const imagenes = document.querySelectorAll('#galeria img')
+const divimagenes = document.getElementById('galeria')
+//seleccion de alt galeria
+const lightbox = document.querySelector('#contenedor-principal');
+
+const imagenActiva = document.querySelector('#img-activa');
+let indiceImagen = 0;
+
+const abreLightbox = (event) => {
+    imagenActiva.src = event.target.src;
+    lightbox.style.display = 'flex'
+    console.log("seleccion de imagen")
+    indiceImagen = Array.from(imagenes).indexOf(event.target);
+    
+
+    divimagenes.style.bottom = "10px";
+    divimagenes.style.zindex = "999";
+    console.log("hola otro flex")
+
+};
+
+imagenes.forEach((imagen) => {
+    imagen.addEventListener('click', abreLightbox);
+    
+});
+
+/* btnCierra.addEventListener('click', () => {
+    ///lightbox.style.display = 'none';
+}); *///no hace nada
+
+
+const inicioImagen = () => {
+
+    if (indiceImagen === imagenes.length - 1) {
+        indiceImagen = -1;
+
+    }
+    imagenActiva.src = imagenes[indiceImagen + 1].src;
+    indiceImagen++;//seleccion de nueva imagen
+    console.log("seleccion de nueva imagen")
+};
+
+btnAdelante.addEventListener('click', inicioImagen)
+
+const finImagen = () => {
+
+    if (indiceImagen === 0) {
+        indiceImagen = imagenes.length;
+    }
+    imagenActiva.src = imagenes[indiceImagen - 1].src;
+    indiceImagen--;
+};
+
+btnAtras.addEventListener('click', finImagen)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* const seccion = document.querySelector// CODIGO ANTIGUO
 const fragment = document.createDocumentFragment()
 
 
-/* const arrayImagenes = [
+const arrayImagenes = [
     {
         id: 1,
         src: 'assets/viajes-1.jpg',
@@ -38,15 +119,23 @@ const fragment = document.createDocumentFragment()
         title: 'title imagen 4'
     }
 ]
- */
+let headerImg =[]
 
 
-const pintarImagenes = () => {
+const aleatorioImg=()=>{
+    let aleatorio = Math.float(Math.random() * headerImg.length);
+    arrayImagenes.src = headerImg(aleatorio).src;
+} */
+
+
+
+
+/* const pintarImagenes = () => {
 
     arrayImagenes.forEach((item, index) => {
-        const caja=document.createElement('DIV')
+        const caja = document.createElement('DIV')
         caja.classList.add('miniaturas')
-        caja.id=item.id
+        caja.id = item.id
         console.log(caja)
 
         const imagen = document.createElement('IMG')//contenido donde se alamacenan las imagenes
@@ -56,7 +145,7 @@ const pintarImagenes = () => {
         imagen.title = item.title;
         imagen.id = "img" + index;
 
-        const titulo=document.createElement('H2')
+        const titulo = document.createElement('H2')
         fragment.append(caja)
 
         //contenedor.classList.add(imagen);
@@ -66,12 +155,18 @@ const pintarImagenes = () => {
 
     })
 
-    
+    const num = Math.floor(Math.random() * arrayImagenes.length);
+    console.log(num)
 
-   
+    arrayImagenes.src = arrayImagenes[num].src;
+    arrayImagenes.title = arrayImagenes[num].title;
 
-}
-pintarImagenes()
+    arrayImagenes.onclick = fuction(); {
+        window.location = arrayImagenes[num].arrayImagenes.cookie;
+    }
+
+} */
+/* pintarImagenes()
 
 function cargaimg() {
     let newImg = document.getElementById("img0");
@@ -87,7 +182,7 @@ const bucleImg = () => {
 
 
 }
-
+ */
 /* let imageGrande = document.getElemntById("imagenGrande")
 
 let contenedorMiniaturas = document.getElemntById("contenedorMinis");

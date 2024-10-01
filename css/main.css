@@ -1,4 +1,107 @@
-.contenedorGaleria{
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+#galeria {
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 2px;
+    max-width: 700px;
+    min-width: 400px;
+    padding: 0 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#img-activa {
+    width: 100%;
+    height: auto;
+    
+  
+}
+
+#contenedor-principal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(20, 2, 28);
+}
+
+#contenedor-interno {
+    width: 500px;
+    height: 400px;
+    border: 3px #eb0909 solid;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#button {
+    cursor:pointer;
+    background:transparent;
+    border:none;
+    color:white;
+}
+#btn-cierra {
+    position: absolute;
+    top:0;
+    right:0;
+    font-size:3rem;
+}
+
+#btn-atras {
+    position: absolute;
+    top:50%;
+    left: 0;
+    font-size:3rem;
+}
+#btn-delante {
+    position:absolute;
+    top:50%;
+    right:0;
+    font-size:3rem;
+}
+
+
+
+
+
+
+
+
+
+/* .contenedorGaleria{
     width: 90%;
     margin: 0 auto;
     padding: 1rem;
@@ -10,10 +113,6 @@
 .prep{
     color: black;
     display: flex;
-    
-
-
-
 }
 
 body{
@@ -26,4 +125,32 @@ body{
 .contenedorGaleria img{
     width: 70%; 
     
+} */
+
+/*=============================
+            768px
+ ============================*/
+
+/*@media(min-width: 768px){
+
+
+
+}
+/*=============================
+            1020px
+ ============================*/
+
+/*@media(min-width: 1020px){
+
+
+
+ }
+ /*=============================
+            2024px
+ ============================*/
+
+/*@media(min-width: 2024px){
+
+
+
 }
