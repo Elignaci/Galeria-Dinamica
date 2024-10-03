@@ -26,6 +26,8 @@ const lightbox = document.querySelector('#contenedor-principal');
 const imagenActiva = document.querySelector('#img-activa');
 let indiceImagen = 0;
 
+
+//iniciar lightbox
 const abreLightbox = (event) => {
     imagenActiva.src = event.target.src;
     lightbox.style.display = 'flex'
@@ -44,11 +46,12 @@ imagenes.forEach((imagen) => {
     
 });
 
+//cierra lightbox
 /* btnCierra.addEventListener('click', () => {
     ///lightbox.style.display = 'none';
 }); *///no hace nada
 
-
+//inicio de imagen a la derecha
 const inicioImagen = () => {
 
     if (indiceImagen === imagenes.length - 1) {
@@ -62,6 +65,7 @@ const inicioImagen = () => {
 
 btnAdelante.addEventListener('click', inicioImagen)
 
+//retrocede imagen a la izquierda
 const finImagen = () => {
 
     if (indiceImagen === 0) {
@@ -168,16 +172,6 @@ const aleatorioImg=()=>{
 } */
 /* pintarImagenes()
 
-function cargaimg() {
-    let newImg = document.getElementById("img0");
-    newImg.src = "assets/viajes-4.jpg";
-    let newImg2 = document.getElementById("img1");
-    newImg2.src = "assets/viajes-5.jpg";
-    let newImg3 = document.getElementById("img2");
-    newImg3.src = "assets/viajes-6.jpg";
-
-}
-const bucleImg = () => {
 
 
 

@@ -3,6 +3,13 @@ html {
     font-size: 62.5%;
 }
 
+.h1 {
+    position: relative;
+    top: 10px;
+    left: 20px;
+
+}
+
 *,
 *::before,
 *::after {
@@ -40,8 +47,8 @@ body {
 #img-activa {
     width: 100%;
     height: auto;
-    
-  
+
+
 }
 
 #contenedor-principal {
@@ -64,33 +71,35 @@ body {
     padding: 4px;
     display: flex;
     justify-content: center;
-    
+
 }
 
 #button {
-    cursor:pointer;
-    background:transparent;
-    border:none;
-    color:white;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: white;
 }
+
 #btn-cierra {
     position: absolute;
-    top:0;
-    right:0;
-    font-size:3rem;
+    top: 0;
+    right: 0;
+    font-size: 3rem;
 }
 
 #btn-atras {
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 0;
-    font-size:3rem;
+    font-size: 3rem;
 }
+
 #btn-delante {
-    position:absolute;
-    top:50%;
-    right:0;
-    font-size:3rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 3rem;
 }
 
 
